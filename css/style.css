@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+.container{
+    height: calc(100vh);
+    background: rgb(215,219,214);
+    background: linear-gradient(0deg, rgba(215,219,214,1) 90%, rgba(0,150,136,1) 90%);
+}
+.app{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding-top: 25px;
+    height: 90vh;
+}
+
+.contatti{
+    height: 100%;
+    width: 35%;
+    border: 1px solid red;
+}
+.chat{
+    height: 100%;
+    width: 65%;
+    border: 1px solid red;
+}
