@@ -15,7 +15,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div id="root" class="container">
         <div class="app">
             <div class="menu">
                 <div class="barra-utente">
@@ -47,23 +47,17 @@
                     </div>
                 </div>
                 <div class="contatti">
-                    <div class="contatto active">
-                        <img src="img/avatar_1.jpg" alt="">
-                        <h5>Michele</h5>
-                    </div>
                     <div class="contatto">
-                        <img src="img/avatar_2.jpg" alt="">
-                        <h5>Fabio</h5>
+                        <ul>
+                            <li class="contatto" v-for="(contact,index) in contacts" :key="index">
+                                <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
+                                <div class="nome-contatto">
+                                    {{contact.name}}
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="contatto">
-                        <img src="img/avatar_3.jpg" alt="">
-                        <h5>Samuele</h5>
-                    </div>
-                    <div class="contatto">
-                        <img src="img/avatar_6.jpg" alt="">
-                        <h5>Luisa</h5>
-                    </div>
-                </div>
+                </div>    
             </div>
             <div class="container-chat">
                 <div class="barra-utente">
@@ -128,3 +122,21 @@
     <script src="js/contacts.js"></script>
 </body>
 </html>
+
+<!-- <div class="contatto active">
+                        <img src="img/avatar_1.jpg" alt="">
+                        <h5 v-for="(contact,index) in contacts" :key="index">{{contact.name}}</h5>
+                    </div> -->
+                    <!-- <div class="contatto">
+                        <img src="img/avatar_2.jpg" alt="">
+                        <h5 v-for="contact in contacts">{{ contact.name}}</h5>
+                    </div>
+                    <div class="contatto">
+                        <img src="img/avatar_3.jpg" alt="">
+                        <h5 v-for="contact in contacts">{{ contact.name}}</h5>
+                    </div>
+                    <div class="contatto">
+                        <img src="img/avatar_6.jpg" alt="">
+                        <h5 v-for="contact in contacts">{{ contact.name}}</h5> -->
+                    <!-- </div> -->
+                   
