@@ -86,9 +86,12 @@ const app = new Vue({
 					}
 				],
 			},
-		]
+		],
+		contactIndex :0,
 	},
 	methods: {
-
+		selezioneChat:function(index){
+			this.contactIndex = index;
+           }
 	}
 });

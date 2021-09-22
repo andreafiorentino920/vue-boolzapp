@@ -49,7 +49,7 @@
                 <div class="contatti">
                     <div class="contatto">
                         <ul>
-                            <li class="contatto" v-for="(contact,index) in contacts" :key="index">
+                            <li class="contatto" v-for="(contact,index) in contacts" :key="index" @click="selezioneChat(index)">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                 <div class="nome-contatto">
                                     {{contact.name}}
@@ -77,17 +77,17 @@
                     </div>
                 </div>
                 <div class="chat">
-                    <div class="row">
-                        <div class="messaggio-inviato">
+                    <div class="row" v-for="(message,index) in contacts[contactIndex].messages" :key="index">
+                        <div :class="message.status">
                             <div class="messaggio">
-                                Hai portato a spasso il cane??
+                                {{message.message}}
                                 <div class="data">
-                                    22/09/2021 10:15:33
+                                    {{message.date}}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="messaggio-inviato">
                             <div class="messaggio">
                                 Hai portato a spasso il cane??
@@ -106,7 +106,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="barra-chat">
                     <div class="icona"><i class="far fa-smile"></i></div>

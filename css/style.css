@@ -74,7 +74,6 @@ body{
     padding: 15px 0;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #eaeaea;
 }
 .active{
     background-color: #eaeaea;
@@ -169,11 +168,11 @@ i{
 .div{
     width: 50%;
 }
-.messaggio-inviato{
+.sent{
     display: flex;
     justify-content: flex-end;
 }
-.messaggio-ricevuto{
+.received{
     display: flex;
     justify-content: flex-start;
 }
@@ -186,11 +185,11 @@ i{
     padding: 15px 5px 5px 10px;
     border-radius: 10px;
 }
-.messaggio-inviato .messaggio{
+.sent .messaggio{
     background-color: #d5f9ba;
 }
-.messaggio-ricevuto .messaggio{
-    background-color: #d5f9ba;
+.received .messaggio{
+    background-color: white;
 }
 .ultimo-accesso{
     display: flex;
