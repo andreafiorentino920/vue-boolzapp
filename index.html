@@ -87,31 +87,11 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="row">
-                        <div class="messaggio-inviato">
-                            <div class="messaggio">
-                                Hai portato a spasso il cane??
-                                <div class="data">
-                                    22/09/2021 10:16:24
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="messaggio-ricevuto">
-                            <div class="messaggio">
-                                Hai portato a spasso il cane??
-                                <div class="data">
-                                    22/09/2021 10:18:02
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="barra-chat">
                     <div class="icona"><i class="far fa-smile"></i></div>
                     <div class="input">
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="nuovoMessaggio" @keyup.enter="invioMessaggio()">
                     </div>
                     <div class="icona"><i class="fas fa-microphone"></i></div>
                 </div>
@@ -119,24 +99,7 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="js/contacts.js"></script>
 </body>
 </html>
-
-<!-- <div class="contatto active">
-                        <img src="img/avatar_1.jpg" alt="">
-                        <h5 v-for="(contact,index) in contacts" :key="index">{{contact.name}}</h5>
-                    </div> -->
-                    <!-- <div class="contatto">
-                        <img src="img/avatar_2.jpg" alt="">
-                        <h5 v-for="contact in contacts">{{ contact.name}}</h5>
-                    </div>
-                    <div class="contatto">
-                        <img src="img/avatar_3.jpg" alt="">
-                        <h5 v-for="contact in contacts">{{ contact.name}}</h5>
-                    </div>
-                    <div class="contatto">
-                        <img src="img/avatar_6.jpg" alt="">
-                        <h5 v-for="contact in contacts">{{ contact.name}}</h5> -->
-                    <!-- </div> -->
-                   
