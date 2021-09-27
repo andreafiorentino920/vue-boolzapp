@@ -1,8 +1,4 @@
-// Milestone 3
-// ● Aggiunta di un messaggio: l ’utente scrive un t esto nella parte bassa e digitando
-// “enter” i l t esto viene aggiunto al t hread sopra, come messaggio verde
-// ● Risposta dell'interlocutore: ad ogni i nserimento di un messaggio, l ’utente riceverà
-// un “ok” come risposta, che apparirà dopo 1 secondo.
+
 const app = new Vue({
 	el: "#root",
 	data: {
@@ -89,7 +85,8 @@ const app = new Vue({
 			},
 		],
 		contactIndex :0,
-		nuovoMessaggio:""
+		nuovoMessaggio:"",
+		cercaChat:""
 	},
 	methods: {
 		selezioneChat:function(index){
@@ -112,5 +109,19 @@ const app = new Vue({
 				});
             },1000);
 		},
+		ricercaChat(){
+			this.contacts.forEach((element) => {
+				if(element.name.toLowerCase().includes(this.cercaChat.toLowerCase())){
+					element.visible= true;
+				}else{
+					element.visible= false;
+				}
+			});
+		}
 	} 
 });
+
+
+// Ricerca utente: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i
+// contatti i l cui nome contiene l e l ettere i nserite (es. Marco, Matteo Martina -> Scrivo
+// “mar” rimangono solo Marco e Martina)
