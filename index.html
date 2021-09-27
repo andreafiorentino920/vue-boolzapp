@@ -49,7 +49,7 @@
                 <div class="contatti">
                     <div class="contatto">
                         <ul>
-                            <li class="contatto" v-for="(contact,index) in contacts" :key="index" @click="selezioneChat(index)" v-if="contacts.visible">
+                            <li class="contatto" v-for="(contact,index) in contacts" :key="index" @click="selezioneChat(index)" v-if="contact.visible">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                 <div class="nome-contatto">
                                     {{contact.name}}

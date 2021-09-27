@@ -105,7 +105,6 @@ const app = new Vue({
 						date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
 				        message: "ok",
                         status: "received"
-
 				});
             },1000);
 		},
