@@ -119,8 +119,3 @@ const app = new Vue({
 		}
 	} 
 });
-
-
-// Ricerca utente: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i
-// contatti i l cui nome contiene l e l ettere i nserite (es. Marco, Matteo Martina -> Scrivo
-// “mar” rimangono solo Marco e Martina)
